@@ -73,7 +73,7 @@ datay = pandas.read_excel(OUT_FILENAME, "Category B")
 dataz = pandas.concat([datax, datay], ignore_index=True)
 
 generateClassificationDiagramA(datax)
-generateClassificationDiagramAandB(dataz)
+generateClassificationDiagramAandB(dataz, len(datax))
 generateCitationCount(datax)
 exit()
 
