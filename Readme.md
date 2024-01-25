@@ -68,3 +68,5 @@ mohanad2023 |Eq 5 | A |
  
 The classification diagram we have has 3 main categories: Single, Ratios, Multivariate.
 In the Single Forms we have (Centra, Definite, Definite Central) subcategories. In the Ratios we have: Moments
+
+### Mahmoud was here

@@ -1,13 +1,13 @@
 import math
 
-def generateClassificationDiagramAandB(data):
+def generateClassificationDiagramAandB(data, l1):
     classifDiagramBegin = \
 r'''\documentclass[tikz]{standalone}
 \usepackage[backend=biber, sorting=ydnt, style=ieee, doi=true,isbn=false,url=true,backref=true,maxnames=6]{biblatex}
 %\usepackage[margin=0.5in, bottom=1in]{geometry}
 \usepackage{xcolor}
 \addbibresource{../MaximaCorrelatedRandoms.bib}
-\usepackage{ulem,tikz}
+\usepackage{tikz}
 \usepackage{tikz-network}
 \usetikzlibrary {shapes.geometric, arrows, arrows.meta}
 \DeclareFieldFormat{postnote}{#1}
@@ -67,7 +67,7 @@ r'''\documentclass[tikz]{standalone}
 
     classifASingVar = ""
     classifASingVarTempR = "\\Text[x={}, y={}, anchor=west]{{\\cite[{}]{{{}}}}}\n"
-    classifASingVarTempC = "\\Text[x={}, y={}, anchor=west]{{\\uline{{\\cite[{}]{{{}}}}}}}\n"
+    classifASingVarTempC = "\\Text[x={}, y={}, anchor=west]{{\\underline{{\\cite[{}]{{{}}}}}}}\n"
     classifAcnt_ind = 0
     classifAcnt_def = 0
     classifAcnt_cent = 0
@@ -75,7 +75,7 @@ r'''\documentclass[tikz]{standalone}
 
     classifARatio = ""
     classifARatioTempR = "\\Text[x={}, y={}, anchor=west]{{\\cite[{}]{{{}}}}}\n"
-    classifARatioTempC = "\\Text[x={}, y={}, anchor=west]{{\\uline{{\\cite[{}]{{{}}}}}}}\n"
+    classifARatioTempC = "\\Text[x={}, y={}, anchor=west]{{\\underline{{\\cite[{}]{{{}}}}}}}\n"
     classifA_Rcnt_gen = 0
     classifA_Rcnt_mom = 0
     classifA_Rcnt_chi2 = 0
@@ -83,7 +83,7 @@ r'''\documentclass[tikz]{standalone}
 
     classifAMultVar = ""
     classifAMVarTempR = "\\Text[x={}, y={}, anchor=west]{{\\cite[{}]{{{}}}}}\n"
-    classifAMVarTempC = "\\Text[x={}, y={}, anchor=west]{{\\uline{{\\cite[{}]{{{}}}}}}}\n"
+    classifAMVarTempC = "\\Text[x={}, y={}, anchor=west]{{\\underline{{\\cite[{}]{{{}}}}}}}\n"
     classifA_Mvargen = 0
     classifA_Mbivar = 0
     classifA_Mchi2 = 0
@@ -94,6 +94,13 @@ r'''\documentclass[tikz]{standalone}
     classifA_Mbiv1fac = 0
 
     for i in data.index:
+        if i > l1:
+            classifASingVarTempR = "\\Text[x={}, y={}, anchor=west]{{\\textit{{\\cite[{}]{{{}}}}}}}\n"
+            classifASingVarTempC = "\\Text[x={}, y={}, anchor=west]{{\\textit{{\\underline{{\\cite[{}]{{{}}}}}}}}}\n"
+            classifARatioTempR = "\\Text[x={}, y={}, anchor=west]{{\\textit{{\\cite[{}]{{{}}}}}}}\n"
+            classifARatioTempC = "\\Text[x={}, y={}, anchor=west]{{\\textit{{\\underline{{\\cite[{}]{{{}}}}}}}}}\n"
+            classifAMVarTempR = "\\Text[x={}, y={}, anchor=west]{{\\textit{{\\cite[{}]{{{}}}}}}}\n"
+            classifAMVarTempC = "\\Text[x={}, y={}, anchor=west]{{\\textit{{\\underline{{\\cite[{}]{{{}}}}}}}}}\n"
         xcitationKey = data["Citation Key"][i]
         if not (type(xcitationKey) is str):
             print("Skipping Invalid Row", i)
