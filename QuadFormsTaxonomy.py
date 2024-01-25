@@ -55,7 +55,7 @@ SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWxekgVrF0HJ2zioEb
 OUT_FILENAME = "QuadFormsData.xlsx"
 
 # Options
-downloadNew = False
+downloadNew = True
 
 ## Get source excel material
 if downloadNew:
@@ -69,12 +69,14 @@ else:
     print("File {} found. We can proceed!".format(OUT_FILENAME))
 
 datax = pandas.read_excel(OUT_FILENAME, "Category A")
+datax=datax.sort_values('Date')
 datay = pandas.read_excel(OUT_FILENAME, "Category B")
 dataz = pandas.concat([datax, datay], ignore_index=True)
 
 generateClassificationDiagramA(datax)
 generateClassificationDiagramAandB(dataz, len(datax))
 generateCitationCount(datax)
+
 exit()
 
 # region "Generate Category A List"
