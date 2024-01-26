@@ -1,4 +1,4 @@
-1. Khammassi (CDF) $M = N$ : $$Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M$$
+1. Khammassi (CDF) $M = N$ : $$Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(0, \Sigma),\quad \Sigma \in \mathbb{R}^{n\times n}, \quad i = 1 \ldots M$$
 
 2. Laverny (PDF) $$Y_i = x^T A_i x,\quad | x \sim \mathcal{N}(0, \Sigma), \quad \exists P | P(\Sigma^{\frac12} A_i \Sigma^{\frac12})P^T = D_i, \forall i\in[1, M], PP^T =I $$ $D_i$ is diagonal.
 
@@ -6,6 +6,6 @@
 
 4. Bithas () $M = N$: $$ Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(\mu, \Sigma), \quad i = 1 \ldots M$$ **Condition 3**
 
-5. Wiegand (PDF?) (2019) $M = N$: $$ Y_i = x^H E_{ii} x, , \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M $$
+5. Wiegand (2019) (PDF?) $M = N$: $$ Y_i = x^H E_{ii} x, , \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M $$
 
-6. 
+6. Weigand (2018) ()
