@@ -1,5 +1,7 @@
 import math
-
+import numpy as np
+import pandas as pd
+import datetime
 def generateCitationCount(ydata):
     citationCountBegin = \
 r'''\documentclass{standalone}
@@ -67,9 +69,31 @@ r'''\documentclass{standalone}
 
         xtick += "},\n"
         xtickLabels += "},\n]\n"
+        xt=[]
+        yt = []
+        x=list(xdata['Date'])
+        y = list(xdata['CitationCount'])
+        for i in range(len(x)):
+            if type(x[i]) ==  pd._libs.tslibs.timestamps.Timestamp:
+                xt.append(x[i].timestamp())
+                yt.append(y[i])
+
+        
+        A = np.vstack([xt, np.ones(len(xt))]).T
+        
+        m, c = np.linalg.lstsq(A, yt, rcond=None)[0]
+
+        line = "\\draw (0,{}) -- ({},0);".format(c,-c/m)
+
+        
+        
         f.write(citationCountBegin)
         f.write(xtick)
         f.write(xtickLabels)
         f.write(xstr)
+        f.write(line)
         f.write(citationCountEnd)
+        
+        
+        
     

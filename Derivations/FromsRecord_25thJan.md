@@ -6,6 +6,8 @@
 
 4. Bithas () $M = N$: $$ Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(\mu, \Sigma), \quad i = 1 \ldots M$$ **Condition 3**
 
-5. Wiegand (2019) (PDF?) $M = N$: $$ Y_i = x^H E_{ii} x, , \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M $$
+5. Wiegand (PDF) (2019) $M = N$: $$ Y_i = x^H E_{ii} x, , \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M $$
 
-6. Weigand (2018) ()
+6. Wiegand (PDF) (2018) $M = N$: $$ Y_i = x^H E_{ii} x, , \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M,\quad \dfrac{\mathbb{E}[x_i^*x_j]}{\mathbb{E}[|x_i|^2]\mathbb{E}[|x_j|^2]}=\dfrac{\mathbb{E}[x_{i+k}^*x_{j+k}]}{\mathbb{E}[|x_{i+k}|^2]\mathbb{E}[|x_{j+k}|^2]} $$
+
+7. Bealieu 3D (PDF) (2017) $M = N = 3$ : $$Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M$$
