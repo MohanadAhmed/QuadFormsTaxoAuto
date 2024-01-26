@@ -77,3 +77,5 @@ $\Sigma$ or $\Sigma^{-1}$ must represent a tree
 
 27. Royen (1991) - One Factorial Gamma: $N = KM$: $$Y_i = x^T (I_k \otimes \Sigma) x,\quad x \sim \mathcal{N}(0, I_K \otimes \Sigma), \Sigma \in \mathbb{R}^{M \times M}$$
 $$ \begin{gathered} \exists v \in \mathbb{R}^{M \times 1}, D = \text{Diag}\; |\; \Sigma = D + vv^T \text{ or } \\ \Sigma = D - vv^T\end{gathered} $$
+
+Need some revision
