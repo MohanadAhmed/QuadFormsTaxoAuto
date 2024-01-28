@@ -24,7 +24,7 @@
 11. Bealieu (2011)
     - A: (CDF, PDF) $M = N$ : $$\begin{gathered}Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(0, \Sigma), \quad i = 1 \ldots M \\ \quad \Sigma \in \mathbb{R}^{N\times N}, \exists v \in \mathbb{R}^{M \times 1}, D = \text{Diag}\; |\; \Sigma = D + vv^T\end{gathered}$$
     - B: (CDF, PDF) $M = N$ : $$\begin{gathered}Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(\mu, \Sigma), \quad i = 1 \ldots M \\ \quad \Sigma \in \mathbb{R}^{N\times N}, \exists v=[\lambda_1, \lambda_2,\ldots,\lambda_N] \in \mathbb{R}^{M \times 1}, D = \text{Diag}\; |\; \Sigma = D + vv^T\\ 
-    \exists z \in \mathbb{C}\;|\; \mu = z\begin{bmatrix}\sqrt{\Sigma_{11}}\lambda_1 & \sqrt{\Sigma_{22}}\lambda_2 & \ldots \sqrt{\Sigma_{nn}}\lambda_n \end{bmatrix}\end{gathered}$$
+    \exists z \in \mathbb{C}\;|\; \mu = z\begin{bmatrix}\sqrt{\Sigma_{11}}\lambda_1 & \sqrt{\Sigma_{22}}\lambda_2 & \ldots \sqrt{\Sigma_{MM}}\lambda_M \end{bmatrix}\end{gathered}$$
     - C (CDF, PDF) $N = mM$ : $$\begin{gathered}Y_i = x^H (I_m\otimes E_{ii}) x, \quad x \sim \mathcal{CN}(0, I_m \otimes \Sigma), \quad i = 1 \ldots M \\ \quad \Sigma \in \mathbb{R}^{M\times M}, \exists v=[\lambda_1, \lambda_2,\ldots,\lambda_M] \in \mathbb{R}^{M \times 1}, D = \text{Diag}\; |\; \Sigma = D + vv^T\\ 
     \end{gathered}$$
     - D (CDF, PDF) $N = mM$ : $$\begin{gathered}Y_i = x^H (I_m\otimes E_{ii}) x, \quad x \sim \mathcal{CN}(\mu, I_m \otimes \Sigma), \quad i = 1 \ldots M \\ \quad \Sigma \in \mathbb{R}^{M \times M}, \exists v=[\lambda_1, \lambda_2,\ldots,\lambda_M] \in \mathbb{R}^{M \times 1}, D = \text{Diag}\; |\; \Sigma = D + vv^T\\ 
@@ -40,7 +40,7 @@
 
 15. Peppas (2009) (CDF) $M = 3, N = 3K$: $$Y_i = x^H (I_K \otimes E_{ii}) x,\quad x \sim \mathcal{CN}(0, I_K \otimes \Sigma), \quad \Sigma \in \mathbb{R}^{3 \times 3}$$
 
-16. Royen (2007) $N = KM$: $$Y_i = x^T (I_k \otimes \Sigma) x,\quad x \sim \mathcal{N}(0, I_K \otimes \Sigma), \Sigma \in \mathbb{R}^{M \times M}$$
+16. Royen (2007) $N = KM$: $$Y_i = x^T (I_k \otimes E_{ii}) x,\quad x \sim \mathcal{N}(0, I_K \otimes \Sigma), \Sigma \in \mathbb{R}^{M \times M}$$
 
 19. Royen (2007) $N = KM = \sum_{g = 1}^G K_g$ $$Y_i = x^T A_i x,\quad x \sim \mathcal{N}(\mu, \Sigma) \quad i = 1 \ldots M $$ $$A_i = \text{diag}\begin{pmatrix}A_i^{(1)} & A_i^{(2)} & \ldots & A_i^{(G)}\end{pmatrix}, A_i^{(g)} = I_{K_g} \otimes E_{ii} $$ $$ \Sigma = \text{diag}\begin{pmatrix}\Sigma^{(1)} & \Sigma^{(1)} & \ldots & \Sigma^{(1)}\end{pmatrix} $$
 
