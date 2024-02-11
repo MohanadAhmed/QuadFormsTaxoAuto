@@ -56,7 +56,7 @@ $$(A_1) = \begin{cases} 1 \quad (i = j) \leq K \\ -1 \quad i = j > K\\ 0 \quad \
 22. Chen and Tellambura (2005):
     - $M = 3, N = 3$: $$Y_i = x^H (E_{ii}) x,\quad x \sim \mathcal{CN}(0, \Sigma) $$
 
-    - $M = 4, N = 4$: $$Y_i = x^H (E_{ii}) x,\quad x \sim \mathcal{CN}(0, \Sigma) $$ $$(\Sigma)_{14} = 0$$
+    - $M = 4, N = 4$: $$Y_i = x^H (E_{ii}) x,\quad x \sim \mathcal{CN}(0, \Sigma) $$ $$(\Sigma^{-1})_{14} = 0$$
 
 23. Schone and Schmid (2000): 
     - $M = 2$: $$Y_1 = x^TA x, \; Y_2 = b^Tx, \quad x \sim \mathcal{N}(0, \Sigma),$$  $$P^T\Sigma^{\frac12}A\Sigma^{\frac12}P = \text{diag}$$ $$\text{rank}(A) > 4  \text{ or }\; \left\{\text{rank}(A) > 2  \;\exists j > \text{rank}(A)\; | \; (P^T\Sigma^{\frac12}b)_j \neq 0  \right\}$$
