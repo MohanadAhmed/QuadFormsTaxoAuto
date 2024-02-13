@@ -36,7 +36,7 @@ results in practical applications..."* is very generic. We need to have more spe
 
 10. On **Establishing Connections**: Mahmoud comments that we showed connections, we did not establish them. He suggests: 
     "Maybe we should try to rederive new results from older ones, examples: 
-    1. derive Khammassis's from Royen's (this doesn't belittle her formula, since her method of approximation by an \epsilon-rank factorial is easier to grasp
+    1. derive Khammassis's from Royen's (this doesn't belittle her formula, since her method of approximation by an $\epsilon_{\text{rank}}$ factorial is easier to grasp
     2. derive Al-Naffouri's exact central complex from already available finite expressions
     3. In the multivariate subsumption graph, go through the edges and check quickly if the formula (i) collapses to (j)'s; if that's true, we consider two cases:
         1. if (i) is older than (j), and (j) doesn't mention the relation explicitly, that's a new connection
