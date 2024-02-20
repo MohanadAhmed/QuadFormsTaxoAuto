@@ -20,7 +20,7 @@ The CDF of the Multivariate gamma distribution at point $(x_1, x_2, \ldots, x_p)
 
 5. Choose the number of steps $z$.
 
-6. Numerical integration loop: For $(\phi_1,\phi_2,\ldots,\phi_{p}):=[-\pi+\dfrac{2\pi}{z}:\dfrac{2\pi}{z}:\pi]^{p}$:
+6. Numerical integration loop: For $(\phi_1,\phi_2,\ldots,\phi_{p}):=\left[-\pi+\dfrac{2\pi}{z}:\dfrac{2\pi}{z}:\pi\right]^{p}$:
 
     1. For $i=1:p$
         - Evaluate $y_i=r\mathrm{e}^{j\phi_i}$
