@@ -1,0 +1,7 @@
+# Selection Combining with Maximum Ratio Combining
+
+Consider a scenenario in which the signals of $N$ receive antennas are combined using (MRC), after receiving the signal of one from $M$ transmit antennas using (SC). Let $H$ be the matrix of channel gains, $$H=(h_{ij})_{\substack{1\leq i \leq N\\1\leq j\leq M}}$$ where $h_{ij}$ is the channel gain between the $j$-th transmit antenna and $i$-th receive antenna. Suppose that $h_{ij}$ follows $\mathcal{CN}(0,\sigma^2)$ (Rayleigh fading). Moreover,consider the most general correlation structure in which all channel gains are correlated, i.e., the transmit antennas are dependent, as well as the receive antennas. 
+
+Using (MRC) at each receiver, the (scaled) SNR is given by $$Y_j=\displaystyle\sum_{i=1}^N |h_{ij}|^2$$ if the $j$-th transmit antenna is chosen. Hence the $j$-th (scaled) SNR is distributed as $Y_{j}\sim x^H (I_N\otimes E_{jj}) x$, where  $x=\operatorname{vec}(H^T) \sim \mathcal{N}(0,\Sigma)$. 
+
+Hence we have $M$ dependent quadratic forms in Gaussian variables. Each form is a general quadratic form which becomes, in the case of independent receivers, a scaled chi-square of $2N$ degrees of freedom. In this case, $\Sigma=\operatorname{diag}(\Sigma_1,\ldots,\Sigma_N)$, where $\Sigma_i$ is the covariance matrix of the $h_i=[h_{i1},\ldots,h_{iM}]$. This corresponds to Jensen's multivariate gamma distribution. Futhermore, assuming symmetry on the receive side, $\Sigma_i=\Sigma_{\text{tr}}$ and this corresponds to (scaled) Royen's multivariate chi-square.

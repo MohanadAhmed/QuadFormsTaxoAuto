@@ -62,3 +62,56 @@ The CDF of the Multivariate gamma distribution at point $(x_1, x_2, \ldots, x_p)
 4. Hagedorn's Trivariate case such that his covariance matrix is real (for comparison)
 <span style="color:red"> Hagedorn actually gives a PDF and hence direct numerical comparison against Royen 2007 paper is not straightforward!! </span>
 5. Dharmawansa et al.: Take any specific case to compare against Royen
+
+## Computational Thoughts
+
+1. It may seem tempting to cut the domain in half, but the real part isn't even in each dimension. Counterexample: K = 3; Sigma = [1 0.8; 0.8 1]; delta = [1 2; 2 5]; z = 100; i_phiX2 = 20.
+
+
+## Single CDF Case
+We are interested in computing the CDF at a single value of $x_1, x_2, \ldots, x_P$.
+```python
+# Inputs
+{x} # x_1, x_2, ... x_P
+T = 100
+v = 0.5
+Delta
+alpha = 
+Sigma
+P = size(Sigma, 1)
+
+# Royens Predefinitions
+B = v^-1 * (Sigma)^-1 - I
+D = v * (Sigma)^-1 * Delta * (Sigma)^-1
+
+# Precompute the values of for all indices.
+Gcal_arr = zeros(P, T)
+for j in range(P):
+    for t in range(T):
+        y_j_t = -pi + (2*pi/T)*t
+        Gcal_arr[j, t] = Gcal(v * x[j], y_j_t)
+
+G = 0
+for s in range(T^P):
+    {i} = LexicographicOrder(s) # i_1, i_2, ..., i_P
+    {y} = {i} * (2*t/T)*pi
+    f2_arg = I + (B .* transpose(y))
+    f1 = exp(trace(((B + diag({y})) ^ -1)*D))
+    f2 = det(f2_arg) ^ alpha
+    f3 = G_util({i})
+    G_s = f1 * f3 / f2
+    G += G_s
+
+# Volume and constants accounting
+
+### Gcal Utility Function
+# Inputs: {x}, {i} ==> {x_1, x_2, ... x_P}, {i_1, i_2, ..., i_P}
+def G_util(i):
+    G = 1
+    for p in range(P):
+        G *= Gcal_arr[p, i[p]]
+
+def Lexicographic(s):
+    # Use remainder and integer division as MATLAB does and suggested by Mahmoud. 
+    # No need for pseudocode, just finished implementing it!!!!
+```
