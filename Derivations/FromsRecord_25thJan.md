@@ -17,7 +17,7 @@
 
 8. Lassere (2017) (CDF,ProbContent) $$Y_i = g_i(x), \quad x \sim \mathcal{N}(\mu, \Sigma),\quad i = 1 \ldots M \quad g_i(x) \text{ is polynomial in } x$$
 
-9. Royen (2016) (CDF) ($N = K \times M$): $$Y_i = x^T E_{ii} x, \quad x \sim \mathcal{N}(\mu, \Sigma),\quad \Sigma = I_K \otimes \Sigma_M, E_{ii} \in \mathbb{R}^{KM \times KM}$$
+9. Royen (2016) (CDF) ($N = K \times M$): $$Y_i = x^T (I_K\otimes E_{ii}) x, \quad x \sim \mathcal{N}(\mu, \Sigma),\quad \Sigma = I_K \otimes \Sigma_M, E_{ii} \in \mathbb{R}^{KM \times KM}$$
 
 10. Bealieu (2011) 2D Rician $M = N = 2$: $$\begin{gathered}Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(\mu, \Sigma),\quad \Sigma \in \mathbb{R}^{2\times 2}, \quad i = 1 \ldots 2\\ \rho = \Sigma_{12}/\sqrt{\Sigma_{22}\Sigma_{11}}, \quad \exists z \in \mathbb{C}, a \in \mathbb{R}\; | \; \mu = z \begin{bmatrix} a \Sigma_{12}/\Sigma_{22} & \rho\Sigma_{12}/(\Sigma_{11}a)\end{bmatrix}^T\end{gathered}$$
 
@@ -57,9 +57,7 @@ $$(A_1) = \begin{cases} 1 \quad (i = j) \leq K \\ -1 \quad i = j > K\\ 0 \quad \
 22. Chen and Tellambura (2005):
     - $M = 3, N = 3$: $$Y_i = x^H (E_{ii}) x,\quad x \sim \mathcal{CN}(0, \Sigma) $$
     $\Sigma$ is allowed to be complex (hermitian of course)
-
-    - $M = 4, N = 4$: $$Y_i = x^H (E_{ii}) x,\quad x \sim \mathcal{CN}(0, \Sigma) $$ $$(\Sigma)_{14} = 0$$
-    $\Sigma$ is allowed to be complex (hermitian of course)
+    - $M = 4, N = 4$: $$Y_i = x^H (E_{ii}) x,\quad x \sim \mathcal{CN}(0, \Sigma) $$ $$(\Sigma^{-1})_{14} = 0$$
 
 23. Schone and Schmid (2000): 
     - $M = 2$: $$Y_1 = x^TA x, \; Y_2 = b^Tx, \quad x \sim \mathcal{N}(0, \Sigma),$$  $$P^T\Sigma^{\frac12}A\Sigma^{\frac12}P = \text{diag}$$ $$\text{rank}(A) > 4  \text{ or }\; \left\{\text{rank}(A) > 2  \;\exists j > \text{rank}(A)\; | \; (P^T\Sigma^{\frac12}b)_j \neq 0  \right\}$$
