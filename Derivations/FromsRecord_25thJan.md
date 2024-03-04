@@ -2,7 +2,7 @@
 
 2. Laverny (2021) (PDF) $$Y_i = x^T A_i x,\quad | x \sim \mathcal{N}(0, \Sigma), \quad$$ $$ \exists P | P(\Sigma^{\frac12} A_i \Sigma^{\frac12})P^T = D_i, \forall i\in[1, M], PP^T =I $$ $D_i \succ 0$ is diagonal.
 
-3. Tekinay (2020) (Moments, PDF, CDF) $M = N = 4$ $$Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(0, \Sigma), \Sigma \in \mathbb{R}^{N\times N}, \quad i = 1 \ldots 4$$
+3. Tekinay (2020) (Moments, PDF, CDF) $M = N = 4$ $$\begin{gathered} Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(0, \Sigma), \Sigma \in \mathbb{R}^{N\times N}, \quad i = 1 \ldots 4 \\ \text{Correlation Matrix is Toeplitz i.e.  } \dfrac{\mathbb{E}[x_i^*x_j]}{\mathbb{E}[|x_i|^2]\mathbb{E}[|x_j|^2]}=\dfrac{\mathbb{E}[x_{i+k}^*x_{j+k}]}{\mathbb{E}[|x_{i+k}|^2]\mathbb{E}[|x_{j+k}|^2]}\end{gathered}$$
 
 4. Bithas (2019) (PDF, CDF) $M = N$: $$Y_i = x^H E_{ii} x, \quad x \sim \mathcal{CN}(\mu, \Sigma), \quad \Sigma \in \mathbb{R}^{N\times N} \quad i = 1 \ldots M$$ $$\exists v \in \mathbb{R}^{M \times 1}, D = \text{Diag}\; |\; \Sigma = D + vv^T$$ **Condition 3**
 *The paper shows rician variables with underlying guassians. that imposes a structure on the mean vector.  Closer inspection reveals this structure can be satsified by any vector ==> NO CONDITION*
